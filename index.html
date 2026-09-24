@@ -74,7 +74,14 @@ const P=[
 {status:'review',y:2026,t:'Administrative Rescaling of Archaeological Landscapes: An Evidence Audit of the Canto Grande Archaeological Reserve, Peru',a:'Christian Mesía-Montenegro & Ángel Sánchez-Borjas',j:'The Historic Environment: Policy & Practice · under review',u:null,link:null,lang:'EN',c:['heritage','landscape']},
 {status:'review',y:2026,t:'Low-Deposition Geoglyph Landscapes, Ritual Form and Embedded Religiousness in the Middle Chillón Valley, Peru',a:'Christian Mesía-Montenegro & Ángel Sánchez-Borjas',j:'Cambridge Archaeological Journal · under review',u:null,link:null,lang:'EN',c:['landscape','formative']},
 {status:'review',y:2026,t:'At the Edge of Loss: Huacoy and Preventive Archaeology in Urbanising Lima',a:'Christian Mesía-Montenegro & Ángel Sánchez-Borjas',j:'Latin American Antiquity · under review',u:null,link:null,lang:'EN',c:['heritage','landscape']}
-];
+];{status:'review',y:2026,
+t:'Ceramic change at Wacheqsa, Chavín de Huántar: Changing associations between ware and decorative technique in an Andean Formative assemblage',
+a:'Christian Mesía-Montenegro',
+j:'PLOS ONE · revised manuscript under review',
+u:null,
+link:null,
+lang:'EN',
+c:['chavin','formative','chronology']},
 const groups=[['published','Peer-reviewed journal articles'],['chapter','Book chapters & essays'],['accepted','Accepted / in press'],['review','Manuscripts under review']];
 function tags(p){const xs=[]; if(p.lang==='ES') xs.push('<span class="badge">Spanish</span>'); if(p.c.includes('chavin')) xs.push('<span class="badge chavin">Chavín / Wacheqsa</span>'); return xs.join('')}
 function draw(f='all'){
