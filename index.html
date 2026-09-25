@@ -1032,6 +1032,7 @@
         <a href="#books">Books</a>
         <a href="#leadership">Leadership</a>
         <a href="#projects">Projects</a>
+        <a href="#trajectory">Trajectory</a>
         <a href="#contact">Contact</a>
 
       </nav>
@@ -1230,9 +1231,9 @@
               research strategy, governance, competitive funding, intellectual
               property, technology transfer, ethics, integrity, and
               international collaboration. I have served as Academic
-              Vice-Rector, Research Vice-Rector, Dean, and Executive Director
-              of a Vice-Rectorate for Research while remaining active in
-              international research and publication.
+              Vice-Rector, Research Vice-Rector, Dean, museum director, and
+              Executive Director of a Vice-Rectorate for Research while
+              remaining active in international research and publication.
             </p>
 
           </div>
@@ -1378,9 +1379,7 @@
 
         <div class="filters">
 
-          <button class="filter active" data-f="all">
-            All
-          </button>
+          <button class="filter active" data-f="all">All</button>
 
           <button class="filter" data-f="chavin">
             Chavín & Wacheqsa
@@ -1505,10 +1504,7 @@
 
         <div>
 
-          <p
-            class="eyebrow"
-            style="color:#c8c4ba"
-          >
+          <p class="eyebrow" style="color:#c8c4ba">
             Research, innovation & technology transfer
           </p>
 
@@ -1705,19 +1701,19 @@
 
     </section>
 
-    <!-- TRAJECTORY -->
+    <!-- LEADERSHIP TRAJECTORY -->
 
-    <section class="shell section">
+    <section class="shell section" id="trajectory">
 
       <div class="label">
         <span>07</span>
-        Trajectory
+        Leadership trajectory
       </div>
 
       <div>
 
         <h2>
-          Academic & executive appointments
+          Academic, executive & museum leadership
         </h2>
 
         <div class="timeline">
@@ -1789,9 +1785,51 @@
           <div class="item">
             <span>2014—2015</span>
             <div>
-              <h3>Academic Director, Graduate School</h3>
+              <h3>
+                Academic Director, Graduate School
+              </h3>
               <p>
                 Universidad San Ignacio de Loyola
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <span>2013</span>
+            <div>
+              <h3>Director</h3>
+              <p>
+                Museo Nacional de la Cultura Peruana
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <span>2011—2013</span>
+            <div>
+              <h3>Director</h3>
+              <p>
+                Casa del Alabado · Museo de Arte Precolombino, Quito
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <span>2009—2010</span>
+            <div>
+              <h3>Director</h3>
+              <p>
+                Museo Nacional de Arqueología, Antropología e Historia del Perú
+              </p>
+            </div>
+          </div>
+
+          <div class="item">
+            <span>2007—2009</span>
+            <div>
+              <h3>Director</h3>
+              <p>
+                Museo Nacional Chavín
               </p>
             </div>
           </div>
@@ -1833,9 +1871,7 @@
             rel="noopener noreferrer"
           >
             <span>ORCID</span>
-            <strong>
-              0000-0002-6707-1351 ↗
-            </strong>
+            <strong>0000-0002-6707-1351 ↗</strong>
           </a>
 
           <a
@@ -1920,9 +1956,7 @@
 
     const P = [
 
-      /* ====================================
-         PEER-REVIEWED JOURNAL ARTICLES
-         ==================================== */
+      /* PEER-REVIEWED JOURNAL ARTICLES */
 
       {
         status: 'published',
@@ -2224,9 +2258,7 @@
         c: ['landscape', 'formative']
       },
 
-      /* ====================================
-         BOOK CHAPTERS
-         ==================================== */
+      /* BOOK CHAPTERS */
 
       {
         status: 'chapter',
@@ -2288,9 +2320,7 @@
         c: ['theory']
       },
 
-      /* ====================================
-         MANUSCRIPTS UNDER REVIEW
-         ==================================== */
+      /* MANUSCRIPTS UNDER REVIEW */
 
       {
         status: 'review',
@@ -2342,15 +2372,11 @@
 
     ];
 
-    /* PUBLICATION GROUPS */
-
     const groups = [
       ['published', 'Peer-reviewed journal articles'],
       ['chapter', 'Book chapters & essays'],
       ['review', 'Manuscripts under review']
     ];
-
-    /* BADGES */
 
     function tags(p) {
 
@@ -2370,8 +2396,6 @@
 
       return xs.join('');
     }
-
-    /* DRAW PUBLICATIONS */
 
     function draw(f = 'all') {
 
@@ -2479,8 +2503,6 @@
 
     draw();
 
-    /* PUBLICATION FILTERS */
-
     document
       .querySelectorAll('.filter')
       .forEach(button => {
@@ -2543,8 +2565,6 @@
 
     }
 
-    /* CURRENT YEAR */
-
     document
       .getElementById('year')
       .textContent =
@@ -2555,3 +2575,5 @@
 </body>
 
 </html>
+
+
