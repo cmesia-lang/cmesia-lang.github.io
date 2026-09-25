@@ -14,41 +14,54 @@
 
   <meta name="theme-color" content="#f4f1e9">
 
-  <!-- Canonical -->
   <link rel="canonical" href="https://cmesia-lang.github.io/">
+
+  <!-- CMM favicon -->
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f4f1e9'/%3E%3Crect x='4' y='4' width='56' height='56' fill='none' stroke='%23171716' stroke-width='2'/%3E%3Ctext x='32' y='38' font-family='Georgia,serif' font-size='18' text-anchor='middle' fill='%23171716'%3ECMM%3C/text%3E%3C/svg%3E"
+  >
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://cmesia-lang.github.io/">
+
   <meta
     property="og:title"
     content="Christian Mesía-Montenegro | Archaeology, Research & Innovation"
   >
+
   <meta
     property="og:description"
     content="Archaeologist, professor, and research & innovation leader. Research on Chavín de Huántar, the Andean Formative, Bayesian chronology, archaeological landscapes, and heritage."
   >
+
   <meta
     property="og:image"
     content="https://cmesia-lang.github.io/assets/christian-mesia-landscape.webp"
   >
 
-  <!-- Twitter / social cards -->
+  <!-- Social cards -->
   <meta name="twitter:card" content="summary_large_image">
+
   <meta
     name="twitter:title"
     content="Christian Mesía-Montenegro | Archaeology, Research & Innovation"
   >
+
   <meta
     name="twitter:description"
     content="Archaeologist, professor, and research & innovation leader."
   >
+
   <meta
     name="twitter:image"
     content="https://cmesia-lang.github.io/assets/christian-mesia-landscape.webp"
   >
 
   <style>
+
     :root {
       --paper: #f4f1e9;
       --ink: #171716;
@@ -59,7 +72,10 @@
       --white: #fff;
       --max: 1180px;
 
-      --serif: Georgia, "Times New Roman", serif;
+      --serif:
+        Georgia,
+        "Times New Roman",
+        serif;
 
       --sans:
         Inter,
@@ -116,9 +132,7 @@
       padding-right: 34px;
     }
 
-    /* =========================
-       HEADER / NAVIGATION
-       ========================= */
+    /* HEADER */
 
     .header {
       position: sticky;
@@ -156,7 +170,7 @@
 
     .nav {
       display: flex;
-      gap: 26px;
+      gap: 23px;
     }
 
     .nav a {
@@ -179,9 +193,7 @@
       color: var(--ink);
     }
 
-    /* =========================
-       HERO
-       ========================= */
+    /* HERO */
 
     .hero {
       display: grid;
@@ -313,9 +325,7 @@
       margin-top: 3px;
     }
 
-    /* =========================
-       LANDSCAPE
-       ========================= */
+    /* LANDSCAPE */
 
     .landscape-band {
       padding-top: 28px;
@@ -348,9 +358,7 @@
       color: #4c4942;
     }
 
-    /* =========================
-       GENERAL SECTIONS
-       ========================= */
+    /* GENERAL SECTIONS */
 
     .section {
       display: grid;
@@ -415,9 +423,7 @@
       display: block;
     }
 
-    /* =========================
-       RESEARCH THEMES
-       ========================= */
+    /* RESEARCH */
 
     .grid {
       display: grid;
@@ -453,9 +459,7 @@
       color: #5d5a53;
     }
 
-    /* =========================
-       PUBLICATIONS
-       ========================= */
+    /* PUBLICATIONS */
 
     .filters {
       display: flex;
@@ -586,22 +590,63 @@
       color: var(--muted);
     }
 
-    /* =========================
-       LEADERSHIP
-       ========================= */
+    /* BOOKS */
 
-    .dark {
+    .books {
+      border-top: 1px solid var(--line);
+    }
+
+    .book {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 32px;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .book-status {
+      font-size: 11px;
+      line-height: 1.5;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .book h3 {
+      font-family: var(--serif);
+      font-size: 28px;
+      line-height: 1.15;
+      font-weight: 400;
+      margin: 0 0 8px;
+    }
+
+    .book-subtitle {
+      font-size: 15px;
+      color: #4f4d47;
+      margin: 0 0 9px;
+    }
+
+    .book p {
+      max-width: 800px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* LEADERSHIP */
+
+    .leadership-band {
+      width: 100%;
       background: var(--dark);
       color: #f2efe8;
     }
 
-    .dark.section {
+    .leadership-section {
       border-bottom: none;
     }
 
-    .dark .label,
-    .dark .label span,
-    .dark .lead {
+    .leadership-band .label,
+    .leadership-band .label span,
+    .leadership-band .lead {
       color: #c8c4ba;
     }
 
@@ -658,9 +703,7 @@
       font-size: 14px;
     }
 
-    /* =========================
-       PROJECTS / TIMELINE
-       ========================= */
+    /* PROJECTS */
 
     .projects article {
       display: grid;
@@ -696,6 +739,8 @@
       padding: 3px 7px;
     }
 
+    /* TRAJECTORY */
+
     .timeline .item {
       display: grid;
       grid-template-columns: 150px 1fr;
@@ -724,9 +769,7 @@
       font-size: 14px;
     }
 
-    /* =========================
-       CONTACT / FOOTER
-       ========================= */
+    /* CONTACT */
 
     .contact {
       padding-bottom: 96px;
@@ -763,6 +806,8 @@
       font-size: 14px;
     }
 
+    /* FOOTER */
+
     .footer {
       border-top: 1px solid var(--line);
       padding: 24px 0;
@@ -781,9 +826,7 @@
       text-underline-offset: 4px;
     }
 
-    /* =========================
-       TABLET / MOBILE
-       ========================= */
+    /* TABLET */
 
     @media (max-width: 900px) {
 
@@ -850,7 +893,14 @@
       .metrics {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .book {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
     }
+
+    /* MOBILE */
 
     @media (max-width: 600px) {
 
@@ -908,9 +958,11 @@
         grid-template-columns: 1fr;
       }
     }
+
   </style>
 
-  <!-- Structured academic identity -->
+  <!-- STRUCTURED ACADEMIC IDENTITY -->
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -949,7 +1001,11 @@
 
 <body>
 
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">
+    Skip to content
+  </a>
+
+  <!-- HEADER -->
 
   <header class="header">
 
@@ -969,12 +1025,15 @@
       </button>
 
       <nav class="nav" id="site-nav">
+
         <a href="#about">About</a>
         <a href="#research">Research</a>
         <a href="#papers">Publications</a>
+        <a href="#books">Books</a>
         <a href="#leadership">Leadership</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+
       </nav>
 
     </div>
@@ -983,9 +1042,7 @@
 
   <main id="main">
 
-    <!-- =========================
-         HERO
-         ========================= -->
+    <!-- HERO -->
 
     <section class="shell hero" id="top">
 
@@ -1112,9 +1169,7 @@
 
     </section>
 
-    <!-- =========================
-         LANDSCAPE
-         ========================= -->
+    <!-- LANDSCAPE -->
 
     <section
       class="shell landscape-band"
@@ -1134,16 +1189,16 @@
         >
 
         <figcaption class="landscape-caption">
-          <strong>Callejón de Conchucos, Ancash, Peru</strong>
+          <strong>
+            Callejón de Conchucos, Ancash, Peru
+          </strong>
         </figcaption>
 
       </figure>
 
     </section>
 
-    <!-- =========================
-         ABOUT
-         ========================= -->
+    <!-- ABOUT -->
 
     <section class="shell section" id="about">
 
@@ -1172,12 +1227,12 @@
 
             <p>
               My institutional work spans university-wide academic management,
-              research strategy, faculty affairs, governance, competitive
-              funding, intellectual property, technology transfer, ethics,
-              integrity, and international collaboration. I have served as
-              Academic Vice-Rector at two universities, Research Vice-Rector,
-              Dean, and Executive Director of a Vice-Rectorate for Research
-              while remaining active in international research and publication.
+              research strategy, governance, competitive funding, intellectual
+              property, technology transfer, ethics, integrity, and
+              international collaboration. I have served as Academic
+              Vice-Rector, Research Vice-Rector, Dean, and Executive Director
+              of a Vice-Rectorate for Research while remaining active in
+              international research and publication.
             </p>
 
           </div>
@@ -1218,9 +1273,7 @@
 
     </section>
 
-    <!-- =========================
-         RESEARCH
-         ========================= -->
+    <!-- RESEARCH -->
 
     <section class="shell section" id="research">
 
@@ -1236,87 +1289,59 @@
         <div class="grid">
 
           <article class="theme">
-
             <span class="num">01</span>
-
-            <h3>
-              Chavín & the Andean Formative
-            </h3>
-
+            <h3>Chavín & the Andean Formative</h3>
             <p>
               Social complexity, ceremonial centres, household–monument
               relationships, ceramics, foodways, and long-term political
               transformation.
             </p>
-
           </article>
 
           <article class="theme">
-
             <span class="num">02</span>
-
             <h3>Bayesian chronology</h3>
-
             <p>
               Radiocarbon synthesis, chronological hygiene, probabilistic
               modelling, activity pulses, and explicit treatment of uncertainty.
             </p>
-
           </article>
 
           <article class="theme">
-
             <span class="num">03</span>
-
-            <h3>
-              Ritual & political economy
-            </h3>
-
+            <h3>Ritual & political economy</h3>
             <p>
               Embedded religiousness, monumentality, authority, exchange,
               feasting, and the institutional production of ritual power.
             </p>
-
           </article>
 
           <article class="theme">
-
             <span class="num">04</span>
-
             <h3>Landscape archaeology</h3>
-
             <p>
               Geoglyphs, route proximity, RPAS documentation, low-deposition
               landscapes, and formal evaluation of spatial associations.
             </p>
-
           </article>
 
           <article class="theme">
-
             <span class="num">05</span>
-
             <h3>Heritage risk</h3>
-
             <p>
               Urban pressure, archaeological loss, spatial forecasting,
               preventive archaeology, and quantitative heritage governance.
             </p>
-
           </article>
 
           <article class="theme">
-
             <span class="num">06</span>
-
             <h3>Research systems</h3>
-
             <p>
               Institutional research governance, innovation ecosystems,
               technology transfer, integrity, bibliometrics, and performance
               systems.
             </p>
-
           </article>
 
         </div>
@@ -1325,9 +1350,7 @@
 
     </section>
 
-    <!-- =========================
-         PUBLICATIONS
-         ========================= -->
+    <!-- PUBLICATIONS -->
 
     <section class="shell section" id="papers">
 
@@ -1350,7 +1373,7 @@
 
         <p class="pubnote">
           Published journal articles and book chapters are presented separately
-          from accepted papers and current manuscripts.
+          from current manuscripts under review.
         </p>
 
         <div class="filters">
@@ -1391,16 +1414,92 @@
 
     </section>
 
-    <!-- =========================
-         LEADERSHIP
-         ========================= -->
+    <!-- BOOKS -->
 
-    <section class="section dark" id="leadership">
+    <section class="shell section" id="books">
 
-      <div class="shell" style="display: contents">
+      <div class="label">
+        <span>04</span>
+        Books
+      </div>
+
+      <div>
+
+        <h2>Books & book projects</h2>
+
+        <p class="lead">
+          Current book-length work develops broader syntheses of Chavín,
+          ritual institutions, monumentality, chronology, and political
+          economy in the Andean Formative.
+        </p>
+
+        <div class="books">
+
+          <article class="book">
+
+            <div class="book-status">
+              Routledge<br>
+              Book project
+            </div>
+
+            <div>
+
+              <h3>
+                Ritual Power and Built Authority in the Andean Formative
+              </h3>
+
+              <p class="book-subtitle">
+                Embedded Religiousness, Monumentality, and
+                Center–Periphery Political Economies
+              </p>
+
+              <p>
+                A synthetic study of institutional religious practice,
+                monumental architecture, political economy, chronology,
+                and long-term social transformation in the Andean Formative.
+              </p>
+
+            </div>
+
+          </article>
+
+          <article class="book">
+
+            <div class="book-status">
+              Instituto de Estudios Peruanos<br>
+              Manuscript in preparation
+            </div>
+
+            <div>
+
+              <h3>
+                Historia mínima de Chavín
+              </h3>
+
+              <p>
+                A concise historical and archaeological synthesis of
+                Chavín de Huántar and its changing place in interpretations
+                of the ancient Andes.
+              </p>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- LEADERSHIP -->
+
+    <section class="leadership-band" id="leadership">
+
+      <div class="shell section leadership-section">
 
         <div class="label">
-          <span>04</span>
+          <span>05</span>
           Leadership
         </div>
 
@@ -1418,10 +1517,11 @@
           </h2>
 
           <p class="lead">
-            My academic leadership has centred on turning institutional strategy
-            into measurable systems for research quality, faculty development,
-            governance, competitive funding, innovation, and scientific
-            integrity across multidisciplinary universities.
+            My academic leadership has centred on turning institutional
+            strategy into measurable systems for research quality,
+            faculty development, governance, competitive funding,
+            innovation, and scientific integrity across multidisciplinary
+            universities.
           </p>
 
           <div class="metrics">
@@ -1464,7 +1564,8 @@
             <div class="metric">
               <strong>+25%</strong>
               <span>
-                scientific-output growth as Research Vice-Rector, 2020–2022
+                scientific-output growth as Research Vice-Rector,
+                2020–2022
               </span>
             </div>
 
@@ -1479,17 +1580,15 @@
 
             <div>
               <h3>Governance</h3>
-
               <p>
-                Policies, performance indicators, ethics and integrity, faculty
-                research systems, research committees, and multicampus
-                coordination.
+                Policies, performance indicators, ethics and integrity,
+                faculty research systems, research committees, and
+                multicampus coordination.
               </p>
             </div>
 
             <div>
               <h3>Innovation</h3>
-
               <p>
                 IP strategy, patent portfolios, technology maturation,
                 university–industry collaboration, and transfer pathways.
@@ -1498,11 +1597,11 @@
 
             <div>
               <h3>Internationalisation</h3>
-
               <p>
                 Research partnerships and funding relationships involving
-                Stanford, Harvard, Universidade de São Paulo, National Geographic
-                Society, Newton Fund, and Global Heritage Fund.
+                Stanford, Harvard, Universidade de São Paulo,
+                National Geographic Society, Newton Fund,
+                and Global Heritage Fund.
               </p>
             </div>
 
@@ -1514,14 +1613,12 @@
 
     </section>
 
-    <!-- =========================
-         PROJECTS
-         ========================= -->
+    <!-- PROJECTS -->
 
     <section class="shell section" id="projects">
 
       <div class="label">
-        <span>05</span>
+        <span>06</span>
         Projects
       </div>
 
@@ -1536,20 +1633,15 @@
             <div>2002—present</div>
 
             <div>
-
-              <h3>
-                Chavín de Huántar Research Program
-              </h3>
-
+              <h3>Chavín de Huántar Research Program</h3>
               <p>
                 Long-term archaeological research integrating excavation,
-                chronology, ceramics, household archaeology, ritual, and
-                authority.
+                chronology, ceramics, household archaeology, ritual,
+                and authority.
               </p>
 
               <span class="tag">Chavín</span>
               <span class="tag">Long-term program</span>
-
             </div>
 
           </article>
@@ -1559,20 +1651,15 @@
             <div>2025</div>
 
             <div>
-
-              <h3>
-                Central Coast Geoglyphs
-              </h3>
-
+              <h3>Central Coast Geoglyphs</h3>
               <p>
-                Survey, RPAS documentation, ceramic association, spatial
-                modelling, and route-proximity analysis in the middle Chillón
-                Valley.
+                Survey, RPAS documentation, ceramic association,
+                spatial modelling, and route-proximity analysis
+                in the middle Chillón Valley.
               </p>
 
               <span class="tag">Geoglyphs</span>
               <span class="tag">Spatial analysis</span>
-
             </div>
 
           </article>
@@ -1582,18 +1669,15 @@
             <div>2020—present</div>
 
             <div>
-
               <h3>Macabalaca</h3>
-
               <p>
-                Research on Kotosh Religious Tradition architecture in the
-                Huarmey Valley and ritual practice outside major ceremonial
-                centres.
+                Research on Kotosh Religious Tradition architecture
+                in the Huarmey Valley and ritual practice outside
+                major ceremonial centres.
               </p>
 
               <span class="tag">Kotosh</span>
               <span class="tag">Formative</span>
-
             </div>
 
           </article>
@@ -1603,19 +1687,14 @@
             <div>2017—present</div>
 
             <div>
-
-              <h3>
-                Starches & lipids at Chavín
-              </h3>
-
+              <h3>Starches & lipids at Chavín</h3>
               <p>
-                Microbotanical and residue-oriented research on culinary
-                equipment from Chavín de Huántar.
+                Microbotanical and residue-oriented research on
+                culinary equipment from Chavín de Huántar.
               </p>
 
               <span class="tag">Foodways</span>
               <span class="tag">Archaeometry</span>
-
             </div>
 
           </article>
@@ -1626,14 +1705,12 @@
 
     </section>
 
-    <!-- =========================
-         TRAJECTORY
-         ========================= -->
+    <!-- TRAJECTORY -->
 
     <section class="shell section">
 
       <div class="label">
-        <span>06</span>
+        <span>07</span>
         Trajectory
       </div>
 
@@ -1712,9 +1789,7 @@
           <div class="item">
             <span>2014—2015</span>
             <div>
-              <h3>
-                Academic Director, Graduate School
-              </h3>
+              <h3>Academic Director, Graduate School</h3>
               <p>
                 Universidad San Ignacio de Loyola
               </p>
@@ -1727,22 +1802,20 @@
 
     </section>
 
-    <!-- =========================
-         CONTACT
-         ========================= -->
+    <!-- CONTACT -->
 
     <section class="shell section contact" id="contact">
 
       <div class="label">
-        <span>07</span>
+        <span>08</span>
         Contact
       </div>
 
       <div>
 
         <h2>
-          Research collaboration, institutional strategy, and international
-          partnerships.
+          Research collaboration, institutional strategy,
+          and international partnerships.
         </h2>
 
         <a
@@ -1771,9 +1844,7 @@
             rel="noopener noreferrer"
           >
             <span>Scopus</span>
-            <strong>
-              Author profile ↗
-            </strong>
+            <strong>Author profile ↗</strong>
           </a>
 
           <a
@@ -1782,9 +1853,7 @@
             rel="noopener noreferrer"
           >
             <span>Google Scholar</span>
-            <strong>
-              Citation profile ↗
-            </strong>
+            <strong>Citation profile ↗</strong>
           </a>
 
           <a
@@ -1804,18 +1873,14 @@
             rel="noopener noreferrer"
           >
             <span>Professional profile</span>
-            <strong>
-              LinkedIn ↗
-            </strong>
+            <strong>LinkedIn ↗</strong>
           </a>
 
           <a
             href="cv/Christian_Mesia_Montenegro_Academic_Executive_CV_2026.pdf"
           >
             <span>Curriculum vitae</span>
-            <strong>
-              Academic CV · PDF ↓
-            </strong>
+            <strong>Academic CV · PDF ↓</strong>
           </a>
 
         </div>
@@ -1826,16 +1891,15 @@
 
   </main>
 
-  <!-- =========================
-       FOOTER
-       ========================= -->
+  <!-- FOOTER -->
 
   <footer class="footer">
 
     <div class="shell footerin">
 
       <span>
-        © <span id="year"></span> Christian Mesía-Montenegro
+        © <span id="year"></span>
+        Christian Mesía-Montenegro
       </span>
 
       <span>
@@ -1850,21 +1914,27 @@
 
   </footer>
 
-  <!-- =========================
-       JAVASCRIPT
-       ========================= -->
+  <!-- JAVASCRIPT -->
 
   <script>
 
-    /*
-     * PUBLICATION DATABASE
-     */
-
     const P = [
 
-      /*
-       * PEER-REVIEWED JOURNAL ARTICLES
-       */
+      /* ====================================
+         PEER-REVIEWED JOURNAL ARTICLES
+         ==================================== */
+
+      {
+        status: 'published',
+        y: 2026,
+        t: 'Identifying Activity Pulses in Radiocarbon Sequences: A Monte Carlo Kernel–Minima Approach and Simulation Assessment',
+        a: 'Christian Mesía-Montenegro',
+        j: 'Radiocarbon · published online',
+        u: 'https://www.cambridge.org/core/journals/radiocarbon/article/identifying-activity-pulses-in-radiocarbon-sequences-a-monte-carlo-kernelminima-approach-and-simulation-assessment/BA866B51543DF48C9E268A3D91DBE0AA',
+        link: 'Article',
+        lang: 'EN',
+        c: ['chronology']
+      },
 
       {
         status: 'published',
@@ -2154,9 +2224,9 @@
         c: ['landscape', 'formative']
       },
 
-      /*
-       * BOOK CHAPTERS AND ESSAYS
-       */
+      /* ====================================
+         BOOK CHAPTERS
+         ==================================== */
 
       {
         status: 'chapter',
@@ -2218,25 +2288,9 @@
         c: ['theory']
       },
 
-      /*
-       * ACCEPTED / IN PRESS
-       */
-
-      {
-        status: 'accepted',
-        y: 2026,
-        t: 'Identifying Activity Pulses in Radiocarbon Sequences: A Monte Carlo Kernel–Minima Approach and Simulation Assessment',
-        a: 'Christian Mesía-Montenegro',
-        j: 'Radiocarbon · accepted for publication',
-        u: null,
-        link: null,
-        lang: 'EN',
-        c: ['chronology']
-      },
-
-      /*
-       * MANUSCRIPTS UNDER REVIEW
-       */
+      /* ====================================
+         MANUSCRIPTS UNDER REVIEW
+         ==================================== */
 
       {
         status: 'review',
@@ -2288,20 +2342,15 @@
 
     ];
 
-    /*
-     * PUBLICATION GROUPS
-     */
+    /* PUBLICATION GROUPS */
 
     const groups = [
       ['published', 'Peer-reviewed journal articles'],
       ['chapter', 'Book chapters & essays'],
-      ['accepted', 'Accepted / in press'],
       ['review', 'Manuscripts under review']
     ];
 
-    /*
-     * PUBLICATION BADGES
-     */
+    /* BADGES */
 
     function tags(p) {
 
@@ -2322,26 +2371,26 @@
       return xs.join('');
     }
 
-    /*
-     * DRAW PUBLICATIONS
-     */
+    /* DRAW PUBLICATIONS */
 
     function draw(f = 'all') {
 
-      const el = document.getElementById('pubs');
+      const el =
+        document.getElementById('pubs');
 
       let html = '';
 
       groups.forEach(([status, title]) => {
 
-        const rows = P.filter(
-          p =>
-            p.status === status &&
-            (
-              f === 'all' ||
-              p.c.includes(f)
-            )
-        );
+        const rows =
+          P.filter(
+            p =>
+              p.status === status &&
+              (
+                f === 'all' ||
+                p.c.includes(f)
+              )
+          );
 
         if (!rows.length) {
           return;
@@ -2362,59 +2411,63 @@
             </div>
         `;
 
-        html += rows.map(p => `
+        html += rows.map(
+          p => `
 
-          <article class="pub">
+            <article class="pub">
 
-            <div class="year">
-              ${p.y}
-            </div>
-
-            <div>
-
-              <h3>
-                ${p.t}
-              </h3>
-
-              <p class="authors">
-                ${p.a}
-              </p>
-
-              <p>
-                ${p.j}
-              </p>
-
-              <div class="pubmeta">
-                ${tags(p)}
+              <div class="year">
+                ${p.y}
               </div>
 
-            </div>
+              <div>
 
-            ${
-              p.u
+                <h3>
+                  ${p.t}
+                </h3>
 
-              ? `
-                <a
-                  href="${p.u}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  ${p.link} ↗
-                </a>
-              `
+                <p class="authors">
+                  ${p.a}
+                </p>
 
-              : `
-                <span class="nolink">
-                  Status noted
-                </span>
-              `
-            }
+                <p>
+                  ${p.j}
+                </p>
 
-          </article>
+                <div class="pubmeta">
+                  ${tags(p)}
+                </div>
 
-        `).join('');
+              </div>
 
-        html += '</section>';
+              ${
+                p.u
+
+                  ? `
+                    <a
+                      href="${p.u}"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      ${p.link} ↗
+                    </a>
+                  `
+
+                  : `
+                    <span class="nolink">
+                      Status noted
+                    </span>
+                  `
+              }
+
+            </article>
+
+          `
+        ).join('');
+
+        html += `
+          </section>
+        `;
 
       });
 
@@ -2424,37 +2477,32 @@
 
     }
 
-    /*
-     * INITIAL DRAW
-     */
-
     draw();
 
-    /*
-     * FILTER BUTTONS
-     */
+    /* PUBLICATION FILTERS */
 
-    document.querySelectorAll('.filter').forEach(button => {
+    document
+      .querySelectorAll('.filter')
+      .forEach(button => {
 
-      button.addEventListener('click', () => {
+        button.addEventListener('click', () => {
 
-        document
-          .querySelectorAll('.filter')
-          .forEach(
-            x => x.classList.remove('active')
-          );
+          document
+            .querySelectorAll('.filter')
+            .forEach(
+              x =>
+                x.classList.remove('active')
+            );
 
-        button.classList.add('active');
+          button.classList.add('active');
 
-        draw(button.dataset.f);
+          draw(button.dataset.f);
+
+        });
 
       });
 
-    });
-
-    /*
-     * MOBILE MENU
-     */
+    /* MOBILE MENU */
 
     const menuButton =
       document.querySelector('.menu-toggle');
@@ -2495,12 +2543,12 @@
 
     }
 
-    /*
-     * FOOTER YEAR
-     */
+    /* CURRENT YEAR */
 
-    document.getElementById('year').textContent =
-      new Date().getFullYear();
+    document
+      .getElementById('year')
+      .textContent =
+        new Date().getFullYear();
 
   </script>
 
