@@ -775,10 +775,32 @@
       padding-bottom: 96px;
     }
 
+    .email-block {
+      margin: 0 0 34px;
+    }
+
+    .email-entry + .email-entry {
+      margin-top: 14px;
+    }
+
+    .email-label {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 10px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
     .email {
       font-family: var(--serif);
       font-size: clamp(24px, 3.2vw, 44px);
       text-underline-offset: 7px;
+    }
+
+    .email.secondary {
+      font-size: clamp(20px, 2.5vw, 34px);
+      color: #4f4d47;
     }
 
     .contactlinks {
@@ -969,6 +991,7 @@
     "@type": "Person",
     "name": "Christian Mesía-Montenegro",
     "jobTitle": "Director of Research, Innovation and Sustainability",
+    "email": ["mailto:christian.mesia@upn.edu.pe", "mailto:cmesia@alumni.stanford.edu"],
     "description": "Academic and research executive, professor, and Stanford-trained archaeologist with university-wide leadership experience in academic affairs, faculty governance, research strategy, innovation, scientific integrity, intellectual property, technology transfer, and institutional change.",
     "image": "https://cmesia-lang.github.io/assets/christian-mesia-profile.webp",
 
@@ -1859,12 +1882,29 @@
           university leadership, and international partnerships.
         </h2>
 
-        <a
-          class="email"
-          href="mailto:christian.mesia@upn.edu.pe"
-        >
-          christian.mesia@upn.edu.pe
-        </a>
+        <div class="email-block">
+
+          <div class="email-entry">
+            <span class="email-label">Institutional</span>
+            <a
+              class="email"
+              href="mailto:christian.mesia@upn.edu.pe"
+            >
+              christian.mesia@upn.edu.pe
+            </a>
+          </div>
+
+          <div class="email-entry">
+            <span class="email-label">Stanford alumni</span>
+            <a
+              class="email secondary"
+              href="mailto:cmesia@alumni.stanford.edu"
+            >
+              cmesia@alumni.stanford.edu
+            </a>
+          </div>
+
+        </div>
 
         <div class="contactlinks">
 
