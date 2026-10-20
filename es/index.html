@@ -992,7 +992,17 @@
       }
     }
 
-  </style>
+  
+/* Optional privacy-first website analytics */
+.analytics-consent{position:fixed;bottom:18px;left:18px;right:18px;z-index:1000;max-width:680px;margin:auto;padding:18px 20px;background:var(--paper,#f4f1e9);color:var(--ink,#171716);border:1px solid var(--line,#d9d4c7);box-shadow:0 8px 35px rgba(0,0,0,.16);font:inherit}
+.analytics-consent[hidden]{display:none!important}
+.analytics-consent p{margin:0 0 12px;font-size:14px}
+.analytics-consent .consent-actions{display:flex;flex-wrap:wrap;gap:10px}
+.analytics-consent button,.analytics-settings{cursor:pointer;padding:9px 12px;border:1px solid var(--ink,#171716);background:transparent;color:inherit;font:inherit;font-size:13px}
+.analytics-consent button:first-child{background:var(--ink,#171716);color:var(--paper,#f4f1e9)}
+.analytics-settings{margin-left:12px}
+@media(max-width:480px){.analytics-consent{bottom:0;left:0;right:0}}
+</style>
 
   <!-- STRUCTURED ACADEMIC IDENTITY -->
 
@@ -1887,7 +1897,8 @@
 
     </div>
 
-  </footer>
+  <button type="button" id="analytics-settings" class="analytics-settings">Privacidad / estadísticas</button>
+</footer>
 
   <!-- JAVASCRIPT -->
 
@@ -2514,6 +2525,40 @@
 
   </script>
 
+
+<div id="analytics-consent" class="analytics-consent" role="region" aria-label="Preferencias de privacidad" hidden>
+  <p>Este sitio utiliza Google Analytics para conocer el tráfico por país y las páginas visitadas. Solo se activa si aceptas. Puedes cambiar tu elección en cualquier momento.</p>
+  <div class="consent-actions"><button type="button" id="analytics-accept">Aceptar estadísticas</button><button type="button" id="analytics-decline">Rechazar</button></div>
+</div>
+<script>
+(function(){
+  'use strict';
+  var key='cmm.analytics.consent.v1';
+  var banner=document.getElementById('analytics-consent');
+  var loaded=false;
+  function current(){try{return localStorage.getItem(key);}catch(e){return null;}}
+  function save(v){try{localStorage.setItem(key,v);}catch(e){/* no storage available */}}
+  function enable(){
+    if(loaded)return;
+    loaded=true;
+    window.dataLayer=window.dataLayer||[];
+    window.gtag=function(){window.dataLayer.push(arguments);};
+    window.gtag('js',new Date());
+    window.gtag('config','G-3KMM8R37SR',{anonymize_ip:true});
+    var tag=document.createElement('script');
+    tag.async=true;
+    tag.src='https://www.googletagmanager.com/gtag/js?id=G-3KMM8R37SR';
+    document.head.appendChild(tag);
+  }
+  function choose(v){save(v);banner.hidden=true;if(v==='yes')enable();else if(loaded){window.gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});}}
+  document.getElementById('analytics-accept').addEventListener('click',function(){choose('yes');});
+  document.getElementById('analytics-decline').addEventListener('click',function(){choose('no');});
+  var setting=document.getElementById('analytics-settings');
+  if(setting)setting.addEventListener('click',function(){banner.hidden=false;});
+  var c=current();
+  if(c==='yes')enable();else if(c!=='no')banner.hidden=false;
+})();
+</script>
 </body>
 
 </html>
