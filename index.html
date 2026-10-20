@@ -13,6 +13,8 @@
   >
 
   <meta name="theme-color" content="#f4f1e9">
+  <meta name="robots" content="index, follow">
+  <meta property="og:locale" content="en_US">
 
   <link rel="canonical" href="https://cmesia-lang.github.io/">
   <link rel="alternate" hreflang="en" href="https://cmesia-lang.github.io/">
@@ -200,6 +202,11 @@
     .lang-switch a { text-decoration:none; color:var(--muted); }
     .lang-switch a[aria-current="page"] { color:var(--accent); font-weight:700; text-decoration:underline; text-underline-offset:4px; }
     @media (max-width: 900px) { .lang-switch { margin-left:8px; } }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .btn { transition: none; }
+    }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
     /* HERO */
 
     .hero {
@@ -1047,6 +1054,7 @@
       </a>
 
       <button
+        type="button"
         class="menu-toggle"
         aria-controls="site-nav"
         aria-expanded="false"
@@ -1547,10 +1555,7 @@
           </h2>
 
           <p class="lead">
-            I have led research and academic portfolios across
-            multidisciplinary universities, with responsibility for budgets,
-            faculty systems, research quality, innovation, governance,
-            scientific integrity, and institutional change.
+            I have held university-wide executive responsibilities across academic and research leadership, including vice-rector, dean, and executive director roles. My work spans academic governance, budget priorities, faculty systems, research quality, intellectual property, innovation, and scientific integrity. At UPN, I developed capital-investment business cases and made allocation decisions within an approximately US$1 million annual CAPEX envelope.
           </p>
 
           <div class="metrics">
@@ -2016,7 +2021,7 @@
   y: 2026,
   t: 'Identifying Activity Pulses in Radiocarbon Sequences: A Monte Carlo Kernel–Minima Approach and Simulation Assessment',
   a: 'Christian Mesía-Montenegro',
-  j: 'Radiocarbon, First View: 1–14',
+  j: 'Radiocarbon 68(5): 1155–1168',
   u: 'https://doi.org/10.1017/RDC.2026.10258',
   link: 'DOI',
   lang: 'EN',
@@ -2428,8 +2433,8 @@
     ];
 
     const groups = [
-      ['published', 'Peer-reviewed journal articles'],
       ['accepted', 'Accepted for publication'],
+      ['published', 'Peer-reviewed journal articles'],
       ['chapter', 'Book chapters & essays'],
       ['review', 'Manuscripts under review']
     ];
