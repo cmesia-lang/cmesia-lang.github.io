@@ -15,6 +15,9 @@
   <meta name="theme-color" content="#f4f1e9">
 
   <link rel="canonical" href="https://cmesia-lang.github.io/">
+  <link rel="alternate" hreflang="en" href="https://cmesia-lang.github.io/">
+  <link rel="alternate" hreflang="es" href="https://cmesia-lang.github.io/es/">
+  <link rel="alternate" hreflang="x-default" href="https://cmesia-lang.github.io/">
 
   <!-- CMM favicon -->
   <link
@@ -193,6 +196,10 @@
       color: var(--ink);
     }
 
+.lang-switch { display: inline-flex; align-items:center; gap:8px; margin-left: 14px; font-size: 13px; white-space: nowrap; }
+    .lang-switch a { text-decoration:none; color:var(--muted); }
+    .lang-switch a[aria-current="page"] { color:var(--accent); font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+    @media (max-width: 900px) { .lang-switch { margin-left:8px; } }
     /* HERO */
 
     .hero {
@@ -1060,7 +1067,9 @@
         <a href="#contact">Contact</a>
 
       </nav>
-
+      <div class="lang-switch" aria-label="Language / Idioma">
+        <a href="/" lang="en" aria-current="page">EN</a><span aria-hidden="true">|</span><a href="/es/" lang="es">ES</a>
+      </div>
     </div>
 
   </header>
@@ -1397,8 +1406,8 @@
         </p>
 
         <p class="pubnote">
-          Published journal articles and book chapters are presented separately
-          from current manuscripts under review.
+          Published journal articles, accepted manuscripts, and book chapters are presented separately
+          from manuscripts under review.
         </p>
 
         <div class="filters">
@@ -1797,7 +1806,7 @@
           </div>
 
           <div class="item">
-            <span>2015—2017</span>
+            <span>2017</span>
             <div>
               <h3>
                 Executive Director, Vice-Rectorate for Research
@@ -1809,10 +1818,10 @@
           </div>
 
           <div class="item">
-            <span>2014—2015</span>
+            <span>2014—2017</span>
             <div>
               <h3>
-                Academic Director, Graduate School
+                Director, Graduate School
               </h3>
               <p>
                 Universidad San Ignacio de Loyola
@@ -2363,19 +2372,21 @@
         c: ['theory']
       },
 
-      /* MANUSCRIPTS UNDER REVIEW */
+      /* ACCEPTED MANUSCRIPTS */
 
       {
-        status: 'review',
+        status: 'accepted',
         y: 2026,
-        t: 'Ceramic change at Wacheqsa, Chavín de Huántar: Changing associations between ware and decorative technique in an Andean Formative assemblage',
+        t: 'Changes in ware–decoration associations in ceramic assemblages from Wacheqsa, Chavín de Huántar, Peru',
         a: 'Christian Mesía-Montenegro',
-        j: 'PLOS ONE · revised manuscript under review',
+        j: 'PLOS ONE · accepted for publication, 19 October 2026 · manuscript PONE-D-26-35517R2',
         u: null,
         link: null,
         lang: 'EN',
         c: ['chavin', 'formative', 'chronology']
       },
+
+      /* MANUSCRIPTS UNDER REVIEW */
 
       {
         status: 'review',
@@ -2418,6 +2429,7 @@
     const groups = [
       ['published', 'Peer-reviewed journal articles'],
       ['chapter', 'Book chapters & essays'],
+      ['accepted', 'Accepted for publication'],
       ['review', 'Manuscripts under review']
     ];
 
@@ -2522,7 +2534,7 @@
 
                   : `
                     <span class="nolink">
-                      Status noted
+                      ${p.status === 'accepted' ? 'Accepted' : 'Status noted'}
                     </span>
                   `
               }
