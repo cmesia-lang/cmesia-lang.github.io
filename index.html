@@ -2600,7 +2600,7 @@
     tag.src='https://www.googletagmanager.com/gtag/js?id=G-3KMM8R37SR';
     document.head.appendChild(tag);
   }
-  function choose(v){save(v);banner.hidden=true;if(v==='yes')enable();else if(loaded){window.gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});}}
+  function choose(v){save(v);banner.hidden=true;if(v==='yes')enable();else if(loaded){window.gtag('consent','update',{analytics_storage:'denied',ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied'});document.cookie.split(';').forEach(function(part){var name=part.trim().split('=')[0];if(/^_ga(?:_|$)/.test(name)){document.cookie=name+'=; Max-Age=0; path=/; SameSite=Lax';}});window.location.reload();}}
   document.getElementById('analytics-accept').addEventListener('click',function(){choose('yes');});
   document.getElementById('analytics-decline').addEventListener('click',function(){choose('no');});
   var setting=document.getElementById('analytics-settings');
